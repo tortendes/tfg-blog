@@ -9,10 +9,15 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    backgroundImage: theme => ({
-      'home-hero': "url('~assets/hero-img.png')"
-    }),
-    extend: {}
+    fontFamily: {
+      sans: ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
+      serif: ['Merriweather', 'Georgia', 'serif']
+    },
+    extend: {
+      backgroundImage: theme => ({
+        'home-hero': "url('~assets/hero-img.png')"
+      })
+    }
   },
   variants: {
     extend: {}
