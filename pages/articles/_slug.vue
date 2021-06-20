@@ -55,6 +55,71 @@ export default {
       })
 
     return { data }
+  },
+  head: {
+    title: `${this.data.title} | The Furry Galaxy Blog`,
+    meta: [
+      {
+        property: 'theme-color',
+        content: '#9E25FA'
+      },
+      {
+        property: 'og:title',
+        content: this.data.title
+      },
+      {
+        property: 'og:description',
+        content: this.data.description
+      },
+      {
+        property: 'og:type',
+        content: 'article'
+      },
+      {
+        property: 'og:site_name',
+        content: 'The Furry Galaxy Blog'
+      },
+      {
+        property: 'og:url',
+        content: 'https://blog.furrygalaxy.gq/'
+      },
+      {
+        property: 'og:image',
+        content: `${this.$config.baseURL}/wp-static/${this.data.image}`
+      },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        hid: 'twitter:url',
+        name: 'twitter:url',
+        content: `${this.$config.baseURL}/articles/${this.$route.params.slug}`
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: this.data.title
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: this.data.description
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: `${this.$config.baseURL}/wp-static/${this.data.image}`
+      }
+    ],
+    link: [
+      {
+        hid: 'canonical',
+        rel: 'canonical',
+        href: `${this.$config.baseURL}/articles/${this.$route.params.slug}`
+      }
+    ]
   }
 }
 </script>
