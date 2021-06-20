@@ -107,7 +107,7 @@ export default {
       {
         hid: 'twitter:title',
         name: 'twitter:title',
-        content: this.data.title
+        content: 'The Furry Galaxy Blog'
       },
       {
         hid: 'twitter:description',
