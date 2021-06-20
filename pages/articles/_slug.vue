@@ -17,7 +17,7 @@
                   </span>
                   <br>
                   <span class="text-gray-400">
-                    {{ $moment(data.createdAt).format('MMMM DD') }} • {{ data.minRead }} minute read
+                    {{ $dayjs(data.createdAt).format('MMMM DD') }} • {{ data.minRead }} minute read
                   </span>
                 </div>
               </div>
