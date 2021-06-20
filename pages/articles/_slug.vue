@@ -81,11 +81,11 @@ export default {
       },
       {
         property: 'og:url',
-        content: 'https://blog.furrygalaxy.gq/'
+        content: 'https://tfg-blog.herokuapp.com/'
       },
       {
         property: 'og:image',
-        content: `${this.$config.baseURL}/wp-static/${this.data.image}`
+        content: `https://tfg-blog.herokuapp.com/wp-static/${this.data.image}`
       },
       {
         hid: 'twitter:card',
@@ -95,7 +95,7 @@ export default {
       {
         hid: 'twitter:url',
         name: 'twitter:url',
-        content: `${this.$config.baseURL}/articles/${this.$route.params.slug}`
+        content: `https://tfg-blog.herokuapp.com/articles/${this.$route.params.slug}`
       },
       {
         hid: 'twitter:title',
@@ -110,14 +110,14 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: `${this.$config.baseURL}/wp-static/${this.data.image}`
+        content: `https://tfg-blog.herokuapp.com//wp-static/${this.data.image}`
       }
     ],
     link: [
       {
         hid: 'canonical',
         rel: 'canonical',
-        href: `${this.$config.baseURL}/articles/${this.$route.params.slug}`
+        href: `https://tfg-blog.herokuapp.com//articles/${this.$route.params.slug}`
       }
     ]
   }
