@@ -56,14 +56,7 @@ export default {
       .fetch()
     return { posts }
   },
-  methods: {
-    async generateURL (path) {
-      const link = await innerLinkAwait(path)
-      function innerLinkAwait (path) {
-        return path
-      }
-      return `${link}`
-    },
+  head: {
     title: 'Home | The Furry Galaxy Blog',
     meta: [
       {
@@ -88,11 +81,11 @@ export default {
       },
       {
         property: 'og:url',
-        content: 'https://blog.furrygalaxy.gq/'
+        content: 'https://tfg-blog.herokuapp.com/'
       },
       {
         property: 'og:image',
-        content: `${this.$config.baseURL}/wp-static/hero-img.png`
+        content: 'https://tfg-blog.herokuapp.com/wp-static/hero-img.png'
       },
       {
         hid: 'twitter:card',
@@ -117,16 +110,25 @@ export default {
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: `${this.$config.baseURL}/wp-static/hero-img.png`
+        content: 'https://tfg-blog.herokuapp.com/wp-static/hero-img.png'
       }
     ],
     link: [
       {
         hid: 'canonical',
         rel: 'canonical',
-        href: `${this.$config.baseURL}/articles/${this.$route.params.slug}`
+        href: 'https://tfg-blog.herokuapp.com/'
       }
     ]
+  },
+  methods: {
+    async generateURL (path) {
+      const link = await innerLinkAwait(path)
+      function innerLinkAwait (path) {
+        return path
+      }
+      return `${link}`
+    }
   }
 }
 </script>
