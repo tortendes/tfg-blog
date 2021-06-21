@@ -56,70 +56,72 @@ export default {
       .fetch()
     return { posts }
   },
-  head: {
-    title: 'Home | The Furry Galaxy Blog',
-    meta: [
-      {
-        property: 'theme-color',
-        content: '#9E25FA'
-      },
-      {
-        property: 'og:title',
-        content: 'The Furry Galaxy Blog'
-      },
-      {
-        property: 'og:description',
-        content: 'The Offical Furry Galaxy Blog'
-      },
-      {
-        property: 'og:type',
-        content: 'website'
-      },
-      {
-        property: 'og:site_name',
-        content: 'The Furry Galaxy Blog'
-      },
-      {
-        property: 'og:url',
-        content: 'https://tfg-blog.herokuapp.com/'
-      },
-      {
-        property: 'og:image',
-        content: 'https://tfg-blog.herokuapp.com/wp-static/hero-img.png'
-      },
-      {
-        hid: 'twitter:card',
-        name: 'twitter:card',
-        content: 'summary_large_image'
-      },
-      {
-        hid: 'twitter:url',
-        name: 'twitter:url',
-        content: 'https://blog.furrgalaxy.gq/'
-      },
-      {
-        hid: 'twitter:title',
-        name: 'twitter:title',
-        content: 'The Furry Galaxy Blog'
-      },
-      {
-        hid: 'twitter:description',
-        name: 'twitter:description',
-        content: 'The Official Furry Galaxy Blog'
-      },
-      {
-        hid: 'twitter:image',
-        name: 'twitter:image',
-        content: 'https://tfg-blog.herokuapp.com/wp-static/hero-img.png'
-      }
-    ],
-    link: [
-      {
-        hid: 'canonical',
-        rel: 'canonical',
-        href: 'https://tfg-blog.herokuapp.com/'
-      }
-    ]
+  head () {
+    return {
+      title: 'Home | The Furry Galaxy Blog',
+      meta: [
+        {
+          property: 'theme-color',
+          content: '#9E25FA'
+        },
+        {
+          property: 'og:title',
+          content: 'The Furry Galaxy Blog'
+        },
+        {
+          property: 'og:description',
+          content: 'The Offical Furry Galaxy Blog'
+        },
+        {
+          property: 'og:type',
+          content: 'website'
+        },
+        {
+          property: 'og:site_name',
+          content: 'The Furry Galaxy Blog'
+        },
+        {
+          property: 'og:url',
+          content: 'https://tfg-blog.herokuapp.com/'
+        },
+        {
+          property: 'og:image',
+          content: 'https://tfg-blog.herokuapp.com/wp-static/hero-img.png'
+        },
+        {
+          hid: 'twitter:card',
+          name: 'twitter:card',
+          content: 'summary_large_image'
+        },
+        {
+          hid: 'twitter:url',
+          name: 'twitter:url',
+          content: 'https://blog.furrgalaxy.gq/'
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: 'The Furry Galaxy Blog'
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: 'The Official Furry Galaxy Blog'
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: 'https://tfg-blog.herokuapp.com/wp-static/hero-img.png'
+        }
+      ],
+      link: [
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: 'https://tfg-blog.herokuapp.com/'
+        }
+      ]
+    }
   },
   methods: {
     async generateURL (path) {
